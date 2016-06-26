@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<profile>
+    <accounts>
+        <accountCredentials>
+            <password>custPassWord</password>
+            <username>custUserName</username>
+        </accountCredentials>
+        <accountCycle>DAILY</accountCycle>
+        <accountNumber>12345</accountNumber>
+        <accountStatus>ACCOUNT_ADDED</accountStatus>
+        <billingCompany>
+            <companyName>Edgars</companyName>
+            <id>1</id>
+            <url>http://edgars.co.za/scrape</url>
+        </billingCompany>
+    </accounts>
+    <customer>
+        <credentials>
+            <password>custPassWord</password>
+            <username>custUserName</username>
+        </credentials>
+        <firstName>sipho</firstName>
+        <lastName>gumede</lastName>
+    </customer>
+    <id>0</id>
+    <profileName>existingProfile</profileName>
+</profile>

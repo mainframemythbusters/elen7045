@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customer>
+    <credentials>
+        <password>custPassWord</password>
+        <username>custUserName</username>
+    </credentials>
+    <firstName>sipho</firstName>
+    <lastName>gumede</lastName>
+</customer>
