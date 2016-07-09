@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
+    <ui:define name="content">
+        <h:outputLabel value="Welcome #{customerCredentials.username}"></h:outputLabel>
+        <h:form>
+	        <h:panelGrid columns="2">
+	        	<!-- <h:commandButton value="View Profile" action="#{profileService.findProfile(profile)}"></h:commandButton> -->
+	        	<h:outputText value="PROFILE 1 - #{profileService.findProfile(profile).profileName}" style="color:Red"/>
+	        </h:panelGrid>
+	        <h:panelGrid columns="2">
+		        <h:dataTable value="#{profileService.findProfile(profile).accounts}" var="account">
+		        	<h:column>
+		        		<h:link value="#{account.accountNumber} - #{account.billingCompany.companyName}" outcome="success">
+		        			<f:param name="id" value="#{account.accountNumber}"/>
+		        		</h:link>
+		        	</h:column>
+		        </h:dataTable>	        	
+	        </h:panelGrid>
+	        <h:panelGrid columns="2">
+	        	<h:inputText value="#{billingCompany.companyName}" />
+	        	<h:commandButton value="Add Account" action="#{profileService.addConsolidatedAccount(profile)}"></h:commandButton> 
+	        	<!-- <h:link value="Add Account" action="#{profileService.addConsolidatedAccount(profile)}"/> -->
+	        </h:panelGrid>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>
